@@ -1,0 +1,5 @@
+
+pip freeze
+pip install pandas
+pip install scikit-learn
+
