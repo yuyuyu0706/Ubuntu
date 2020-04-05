@@ -1,0 +1,4 @@
+
+
+ansible-galaxy install geerlingguy.pip -p /home/support/ansible/roles
+
