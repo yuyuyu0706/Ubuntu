@@ -1,0 +1,10 @@
+
+# venv install
+sudo apt-get update
+sudo apt-get install python3-venv
+mkdir /home/support/python/xxxxx
+python3 -V
+python3 -m venv /home/support/python/xxxxx
+
+# venv https://qiita.com/white_aspara25/items/723ae4ebf0bfefe2115c
+# apt  https://qiita.com/fiftystorm36/items/b2fd47cf32c7694adc2e
