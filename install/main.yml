@@ -9,3 +9,4 @@
      - htop
      - venv
      - unzip
+     - libgomp1 # lightgbm
