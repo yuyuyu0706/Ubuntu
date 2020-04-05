@@ -8,3 +8,4 @@
      - tmux
      - htop
      - venv
+     - unzip
