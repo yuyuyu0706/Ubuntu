@@ -1,0 +1,76 @@
+##############
+git導入
+##############
+
+## ローカルリポジトリのディレクトリ作成
+support@server01:~/python/kaggle/M5-Forecasting/code$ mkdir repos
+support@server01:~/python/kaggle/M5-Forecasting/code$ cd repos/
+
+support@server01:~/python/kaggle/M5-Forecasting/code/repos$ git init
+Initialized empty Git repository in /home/support/python/kaggle/M5-Forecasting/code/repos/.git/
+
+support@server01:~/python/kaggle/M5-Forecasting/code/repos$ git clone https://github.com/yuyuyu0706/kaggle.git
+Cloning into 'kaggle'...
+Username for 'https://github.com': yuyuyu0706
+Password for 'https://yuyuyu0706@github.com': 
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+
+## 階層が深い為、シンボリックリンクを張る
+support@server01:ln -s ~/python/kaggle/M5-Forecasting/code/repos/kaggle/M5-Forecasting git
+
+## 更新用ファイルをローカルリポジトリに格納
+support@server01:~/python/kaggle/M5-Forecasting/code$ cp -ip ./train.py ./git/train.py
+cp: overwrite './git/train.py'? y
+
+## ローカルリポジトリに登録
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git add train.py
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   train.py
+
+## ローカルリポジトリにコミット
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git commit -am "Update"
+[master b18b213] Update
+ 1 file changed, 15 insertions(+), 7 deletions(-)
+support@server01:~/python/kaggle/M5-Forecasting/code/git$
+
+## リモートリポジトリ確認
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git remote -v
+origin  https://github.com/yuyuyu0706/kaggle.git (fetch)
+origin  https://github.com/yuyuyu0706/kaggle.git (push)
+
+## ブランチ名を確認
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git branch
+* master
+
+## リモートリポジトリに変更反映
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git push -u origin master
+Username for 'https://github.com': yuyuyu0706
+Password for 'https://yuyuyu0706@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 516 bytes | 516.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/yuyuyu0706/kaggle.git
+   0a1f483..b18b213  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ 
+
+~~~~~~~~Webでリモートリポジトリを見ると反映されていました~~~~~~~~~~~
+
+## リモートリポジトリ名の変更
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git remote rename origin kaggle
+support@server01:~/python/kaggle/M5-Forecasting/code/git$ git remote -v
+kaggle  https://github.com/yuyuyu0706/kaggle.git (fetch)
+kaggle  https://github.com/yuyuyu0706/kaggle.git (push)
