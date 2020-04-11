@@ -1,5 +1,4 @@
 
-
 # https://cloud.google.com/storage/docs/quickstart-gsutil?hl=ja
 
 gsutil ls gs://bukket_001/kaggle/M5-Forecasting
