@@ -2,4 +2,10 @@
 pip freeze
 pip install pandas
 pip install scikit-learn
+pip install lightgbm
+pip install tqdm
+pip install jupyter
 
+# https://www.pynote.info/entry/jupyter-notebook-nbextensions
+pip install jupyter-contrib-nbextensions
+pip install jupyter-nbextensions-configurator
