@@ -3,5 +3,6 @@
 
 gsutil ls gs://bukket_001/kaggle/M5-Forecasting
 gsutil cp gs://bukket_001/kaggle/M5-Forecasting/m5-forecasting-accuracy.zip ~/python/kaggle/M5-Forecasting/input
+gsutil cp ~/python/kaggle/M5-Forecasting/code/submit.csv gs://bukket_001/kaggle/M5-Forecasting/
 gsutil mv gs://bukket_001/billing-reports-2020-04-05.csv gs://billing-reports-files
 gsutil mv gs://bukket_001/billing-reports-2020-04-0*.csv gs://billing-reports-files
